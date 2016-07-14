@@ -1,0 +1,59 @@
+MODEL,MAKE,MODEL,VEHICLE CLASS,MOTOR,ENGINE SIZE,CYLINDERS,TRANSMISSION,FUEL,CONSUMPTION,RANGE,RECHARGE,FUEL,CONSUMPTION,,,RANGE,CO2 EMISSIONS,CO2
+YEAR,,,,(kW),(L),,,TYPE 1,COMBINED Le/100 km,(km),TIME (h),TYPE 2,CITY (L/100 km),HWY (L/100 km),COMB (L/100 km),(km),(g/km),RATING
+2012,CHEVROLET,VOLT,COMPACT,111,1.4,4,AV,B,2.5 (22.3 kWh/100 km),56,4,Z,6.7,5.9,6.4,550,54,n/a
+2013,CHEVROLET,VOLT,COMPACT,111,1.4,4,AV,B,2.4 (21.4 kWh/100 km),61,4,Z,6.7,5.9,6.4,550,45,n/a
+2013,FORD,C-MAX ENERGI,MID-SIZE,68,2.0,4,AV,B/X,2.7 ([23.2 kWh + 0.1 L]/100 km),32,2.5,X,5.8,6.5,6.1,856,80,n/a
+2013,FORD,FUSION ENERGI,MID-SIZE,68,2.0,4,AV,B/X,2.7 ([23.2 kWh + 0.1 L]/100 km),32,2.5,X,5.8,6.5,6.1,856,80,n/a
+2013,TOYOTA,PRIUS PLUG-IN,MID-SIZE,60,1.8,4,AV,B/X,2.5 ([18.0 kWh + 0.4 L]/100 km),17,1.5,X,4.7,4.8,4.7,845,81,n/a
+2014,CADILLAC,ELR,COMPACT,117,1.4,4,AV,B,2.9 (25.3 kWh/100 km),59,5,Z,7.6,6.7,7.2,493,50,n/a
+2014,CHEVROLET,VOLT,COMPACT,111,1.4,4,AV,B,2.4 (21.4 kWh/100 km),61,4,Z,6.7,5.9,6.4,550,45,n/a
+2014,FORD,C-MAX ENERGI,MID-SIZE,68,2.0,4,AV,B/X,2.7 ([23.2 kWh + 0.1 L]/100 km),32,2.5,X,5.8,6.5,6.1,856,80,n/a
+2014,FORD,FUSION ENERGI,MID-SIZE,68,2.0,4,AV,B/X,2.7 ([23.2 kWh + 0.1 L]/100 km),32,2.5,X,5.8,6.5,6.1,856,80,n/a
+2014,PORSCHE,PANAMERA S E-HYBRID,FULL-SIZE,71,3.0,6,A8,B/Z,4.6 ([31.7 kWh + 1.0 L]/100 km),26,3,Z,10.4,8.0,9.3,871,142,n/a
+2014,TOYOTA,PRIUS PLUG-IN,MID-SIZE,60,1.8,4,AV,B/X,2.5 ([18.0 kWh + 0.4 L]/100 km),17,1.5,X,4.7,4.8,4.7,845,81,n/a
+2015,BMW,i3 REX,SUBCOMPACT,125,0.6,2,A1,B,2.0 (17.9 kWh/100 km),116,4,Z,5.7,6.3,6.0,119,22,n/a
+2015,BMW,i8,SUBCOMPACT,96,1.5,3,A6,B/Z,3.0 ([26.9 kWh + 0.2 L]/100 km),24,2,Z,8.4,8.1,8.3,509,123,n/a
+2015,CHEVROLET,VOLT,COMPACT,111,1.4,4,AV,B,2.4 (21.4 kWh/100 km),61,4,Z,6.7,5.9,6.4,547,50,n/a
+2015,FORD,C-MAX ENERGI,MID-SIZE,68,2.0,4,AV,B/X,2.7 ([23.2 kWh + 0.1 L]/100 km),32,2.5,X,5.8,6.5,6.1,856,80,n/a
+2015,FORD,FUSION ENERGI,MID-SIZE,68,2.0,4,AV,B/X,2.7 ([23.2 kWh + 0.1 L]/100 km),32,2.5,X,5.8,6.5,6.1,856,80,n/a
+2015,PORSCHE,918 SPYDER,TWO-SEATER,157,4.6,8,A7,B,3.4 (30.6 kWh/100 km),21,3,Z,11.5,10.0,10.8,649,172,n/a
+2015,PORSCHE,CAYENNE S E-HYBRID,SUV - STANDARD,71,3.0,6,A8,B,5.0 (43.2 kWh/100 km),24,3,Z,11.3,9.8,10.6,758,162,n/a
+2015,PORSCHE,PANAMERA S E-HYBRID,FULL-SIZE,71,3.0,6,A8,B/Z,4.6 ([31.7 kWh + 1.0 L]/100 km),26,3,Z,10.4,8.0,9.3,871,142,n/a
+2015,TOYOTA,PRIUS PLUG-IN,MID-SIZE,60,1.8,4,AV,B/X,2.5 ([18.0 kWh + 0.4 L]/100 km),17,1.5,X,4.7,4.8,4.7,845,81,n/a
+2016,AUDI,A3 e-tron,COMPACT,80,1.4,4,A6,B/Z*,2.8 ([24.9 kWh + 0.0 L]/100 km),26,2.5,Z,7.1,6.4,6.7,586,98,10
+2016,AUDI,A3 e-tron ultra,COMPACT,80,1.4,4,A6,B/Z*,2.7 ([23.6 kWh + 0.0 L]/100 km),27,2.5,Z,6.4,5.7,6.0,665,86,10
+2016,BMW,330e,COMPACT,65,2.0,4,AS8,B/Z*,3.3 ([29.1 kWh + 0.0 L]/100 km),23,2,Z,8.4,6.3,7.4,562,113,10
+2016,BMW,i3 REX,SUBCOMPACT,125,0.6,2,A1,B,2.0 (17.9 kWh/100 km),116,4,Z,5.7,6.3,6.0,119,22,10
+2016,BMW,i8,SUBCOMPACT,96,1.5,3,A6,B/Z,3.0 ([26.9 kWh + 0.2 L]/100 km),24,2,Z,8.4,8.1,8.3,509,123,9
+2016,BMW,X5 xDRIVE40e,SUV - STANDARD,83,2.0,4,AS8,B/Z*,4.1 ([36.8 kWh + 0.0 L]/100 km),23,3,Z,10.2,9.5,9.9,864,153,8
+2016,CADILLAC,ELR,SUBCOMPACT,174,1.4,4,AV,B,2.7 (24.4 kWh/100 km),64,5,Z,7.6,7.1,7.4,480,57,10
+2016,CADILLAC,ELR (Performance Pkg),SUBCOMPACT,174,1.4,4,AV,B,2.9 (26.2 kWh/100 km),58,5,Z,8.4,7.1,7.8,457,65,10
+2016,CHEVROLET,VOLT,COMPACT,111,1.5,4,AV,B,2.2 (19.9 kWh/100 km),85,4.5,X,5.5,5.6,5.6,591,32,10
+2016,FORD,C-MAX ENERGI,MID-SIZE,68,2.0,4,AV,B/X,2.7 ([23.2 kWh + 0.1 L]/100 km),32,2.5,X,5.8,6.5,6.1,856,80,10
+2016,FORD,FUSION ENERGI,MID-SIZE,68,2.0,4,AV,B/X,2.7 ([23.2 kWh + 0.1 L]/100 km),32,2.5,X,5.8,6.5,6.1,856,80,10
+2016,HYUNDAI,SONATA PLUG-IN,MID-SIZE,50,2.0,4,AM6,B/X*,2.4 ([21.1 kWh + 0.0 L]/100 km),43,2.7,X,6.1,5.7,5.9,925,63,10
+2016,MERCEDES-BENZ,S 550e,FULL-SIZE,85,3.0,6,AS7,B/Z*,4.1 ([36.7 kWh + 0.0 L]/100 km),23,2.75,Z,10.0,7.8,9.0,695,141,9
+2016,PORSCHE,CAYENNE S E-HYBRID,SUV - STANDARD,71,3.0,6,A8,B,5.0 (43.2 kWh/100 km),24,3,Z,11.3,9.8,10.6,758,162,8
+2016,PORSCHE,PANAMERA S E-HYBRID,FULL-SIZE,71,3.0,6,A8,B/Z,4.6 ([31.7 kWh + 1.0 L]/100 km),26,3,Z,10.4,8.0,9.3,871,142,9
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+"*In testing, this vehicle did not use any gasoline during electric mode operation. However, depending on how you drive the vehicle, you may use gasoline during electric mode operation following a full charge.",,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+"NOTE: Vehicle manufacturers are using an improved testing procedure, introduced for model year 2015, to determine the fuel consumption ratings of new light-duty vehicles. The improved testing produces higher fuel consumption ratings that are more representative",,,,,,,,,,,,,,,,,,
+"of everyday driving. To help you compare vehicles from different model years, the ratings for 1995-2014 vehicles have been adjusted to reflect the improved testing.",,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+Understanding the Table,,,,,,,,,,,,,,,,,,
+Transmission,A = Automatic,,,,,,,,,,,,,,,,,
+,AM = Automated manual,,,,,,,,,,,,,,,,,
+,AS = Automatic with select shift,,,,,,,,,,,,,,,,,
+,AV = Continuously variable,,,,,,,,,,,,,,,,,
+,1 – 10 = Number of gears,,,,,,,,,,,,,,,,,
+Fuel Type,B = Electricity,,,,,,,,,,,,,,,,,
+,X = Regular gasoline,,,,,,,,,,,,,,,,,
+,Z = Premium gasoline,,,,,,,,,,,,,,,,,
+Consumption,The combined fuel consumption rating reflects 55 percent city and 45 percent highway driving. ,,,,,,,,,,,,,,,,,
+,Le is gasoline litre equivalent. One litre of gasoline contains the energy equivalent to 8.9 kWh of electricity.,,,,,,,,,,,,,,,,,
+Range,the estimated driving distance (in kilometres) on a fully charged battery or full tank of fuel,,,,,,,,,,,,,,,,,
+Recharge time,the estimated time (in hours) to fully recharge the battery at 240 volts,,,,,,,,,,,,,,,,,
+CO2 Emissions,"The vehicle's tailpipe emissions of carbon dioxide are shown in grams per kilometre for combined city and highway driving, and reflect a mix of electric mode and gasoline-only operation.",,,,,,,,,,,,,,,,,
+CO2 Rating,the tailpipe emissions of carbon dioxide rated on a scale from 1 (worst) to 10 (best),,,,,,,,,,,,,,,,,

@@ -7,7 +7,7 @@ library(ggthemes)
 ### initialize folder
 
 home <- "/Users/xing"
-project <- paste0(home, "/Desktop/Clean_R/Data")
+project <- paste0(home, "/Desktop/canada_R_code/Data")
 
 dat1 <- read.csv(paste0(project, "/refugees.csv"), stringsAsFactors = F)
 

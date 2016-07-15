@@ -89,7 +89,7 @@ hist(fcr14$co2_emissions)
 plot(fcr14$fuel_con_mpg, fcr14$c02_emissions)
 boxplot(fcr14$fuel_con_city ~ fcr14$fuel_type)
 
-##### average co2 level by class #####
+######### average co2 level by class (type of car) #########
 co2_by_class14 <- fcr14 %>%
   group_by(class) %>%
   summarise(mean_co2 = mean(co2_emissions))
@@ -125,5 +125,96 @@ ggplot(co2_melt, aes(variable, value, group = class, col = class)) +
   xlab("Year") +
   ylab("Average CO2 Emissions") +
   ggtitle("Average CO2 Emissions by Type of Car 2014-2016")
-  
 
+
+######### average fuel consumption (city/hwy) by class (type of car) #########  
+#2014 
+fc.14 <- fcr14 %>%
+  group_by(class) %>%
+  summarise(mean.fc = mean(fuel_con_comb),
+            sd.fc = sd(fuel_con_comb),
+            n_cars = n()) %>%
+  mutate(se.fc = sd.fc / sqrt(n_cars),
+         lower.ci.fc = mean.fc - qt(1 - (0.05 / 2), n_cars - 1) * se.fc,
+         upper.ci.fc = mean.fc + qt(1 - (0.05 / 2), n_cars - 1) * se.fc)
+
+ggplot(fc.14, aes(reorder(class, mean.fc), mean.fc)) +
+  geom_bar(stat = "identity") +
+  geom_errorbar(aes(ymin=lower.ci.fc, ymax=upper.ci.fc),
+                width=.2) +
+  xlab("Type of Car") +
+  ylab("Average Fuel Consumption (L/100km)") +
+  ggtitle("Average Fuel Consumption by Car Type 2014") +
+  theme_economist()
+
+# 2016
+fc.16 <- fcr16 %>%
+  group_by(class) %>%
+  summarise(mean.fc = mean(fuel_con_comb),
+            sd.fc = sd(fuel_con_comb),
+            n_cars = n()) %>%
+  mutate(se.fc = sd.fc / sqrt(n_cars),
+         lower.ci.fc = mean.fc - qt(1 - (0.05 / 2), n_cars - 1) * se.fc,
+         upper.ci.fc = mean.fc + qt(1 - (0.05 / 2), n_cars - 1) * se.fc)
+
+ggplot(fc.16, aes(reorder(class, mean.fc), mean.fc)) +
+  geom_bar(stat = "identity") +
+  geom_errorbar(aes(ymin=lower.ci.fc, ymax=upper.ci.fc),
+                width=.2) +
+  xlab("Type of Car") +
+  ylab("Average Fuel Consumption (L/100km)") +
+  ggtitle("Average Fuel Consumption by Car Type 2016") +
+  theme_economist()
+
+########### CREATE ONE DATAFRAME WITH DATA FROM 2014-2016 ######
+fcr_all <- rbind(fcr14, fcr15, fcr16)
+
+# specify fuel type #
+fcr_all$fuel_type <- ifelse(fcr_all$fuel_type == "Z", "premium",
+                            ifelse(fcr_all$fuel_type == "X", "regular", 
+                                   ifelse(fcr_all$fuel_type == "E", "ethanol",
+                                          ifelse(fcr_all$fuel_type == "D", "diesel", "natural"))))
+
+fcr16$fuel_type <- ifelse(fcr16$fuel_type == "Z", "premium",
+                            ifelse(fcr16$fuel_type == "X", "regular", 
+                                   ifelse(fcr16$fuel_type == "E", "ethanol",
+                                          ifelse(fcr16$fuel_type == "D", "diesel", "natural"))))
+
+#### average fuel consumption over time by car type ####
+fc <- fcr_all %>%
+  group_by(class, year) %>%
+  summarise(mean.fc = mean(fuel_con_comb))
+
+ggplot(fc, aes(year, mean.fc, group = class, col = class)) +
+  geom_line(size = 1) +
+  geom_point() +
+  xlab("Year") +
+  ylab("Average Fuel Consumption (L/100km)") +
+  ggtitle("Average Fuel Consumption of Different Car Types, 2014-16")
+
+##### average co2 emissions by fuel type/make/engine size ##### 
+fcr_all$fuel_type <- as.factor(fcr_all$fuel_type)
+
+mean.fc16 <- fcr16 %>%
+  group_by(engine_size) %>%
+  summarise(mean.fc = mean(fuel_con_comb),
+            sd.fc = sd(fuel_con_comb),
+            med.fc = median(fuel_con_comb),
+            min.fc = min(fuel_con_comb),
+            max.fc = max(fuel_con_comb))        
+
+## scatterplot of fuel consumption by engine size ###
+ggplot(mean.fc16, aes(engine_size, mean.fc)) +
+  geom_point(size = 3, alpha = .5) +
+  geom_smooth() +
+  xlab("Engine Size") +
+  ylab("Average Fuel Consumption (L/100km)") +
+  ggtitle("Fuel Consumption by Engine Size") + 
+  theme_economist()
+
+##### REDUCE TO FEWER MAKES OF CARS #####
+#2016
+fcr16$make <- as.character(fcr16$make)
+
+keep <- 'ACURA|AUDI|BMW|FORD|HONDA|HYUNDAI|KIA|MERCEDES-BENZ|NISSAN|TOYOTA|VOLKSWAGEN|VOLVO'
+fcr16 <- fcr16[grepl(keep, fcr16$make),]

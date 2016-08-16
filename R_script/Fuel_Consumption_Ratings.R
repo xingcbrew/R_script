@@ -216,5 +216,21 @@ ggplot(mean.fc16, aes(engine_size, mean.fc)) +
 #2016
 fcr16$make <- as.character(fcr16$make)
 
-keep <- 'ACURA|AUDI|BMW|FORD|HONDA|HYUNDAI|KIA|MERCEDES-BENZ|NISSAN|TOYOTA|VOLKSWAGEN|VOLVO'
+keep <- 'AUDI|BMW|FORD|HONDA|HYUNDAI|KIA|MERCEDES-BENZ|NISSAN|TOYOTA|VOLKSWAGEN|VOLVO'
 fcr16 <- fcr16[grepl(keep, fcr16$make),]
+keep2 <- 'COMPACT|FULL-SIZE|MID-SIZE|MINIVAN|SUBCOMPACT|SUV-SMALL|SUV-STANDARD'
+fcr16 <- fcr16[grepl(keep2, fcr16$class),]
+
+mfc16 <- fcr16 %>%
+  group_by(make, class) %>%
+  summarise(mean.fc = mean(fuel_con_comb))
+
+ggplot(mfc16, aes(class, mean.fc, group = make, fill = make)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  xlab("Type of Car") +
+  ylab("Aveage Fuel Consumption (L/100km)") +
+  ggtitle("Average Fuel Consumption by Type of Car, 2016") +
+  scale_fill_brewer(palette="Spectral")
+  
+
+

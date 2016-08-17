@@ -96,7 +96,3 @@ for (i in 2:ncol(ttc)) {
 # change order of columns
 
 ttc2 <- ttc[,c("fare_type", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015")]
-
-# make line graph of system_total by year
-
-ggplot(ttc2, aes())
